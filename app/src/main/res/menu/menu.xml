@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottomNavigationHome"
+        android:icon="@drawable/home"
+        android:title="@string/str_home"/>
+
+    <item
+        android:id="@+id/bottomNavigationExpense"
+        android:icon="@drawable/expenses"
+        android:title="@string/str_expense"/>
+
+    <item
+        android:id="@+id/bottomNavigationIncome"
+        android:icon="@drawable/income"
+        android:title="@string/str_income"/>
+</menu>
