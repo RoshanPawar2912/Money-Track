@@ -22,11 +22,11 @@ object AppModule {
         return appDatabase.provideTransactionDao()
     }
 
-    @Provides
-    @Singleton
-    fun provideTransactionRepo(transactionDao: TransactionDao): TransactionRepo {
-        return TransactionRepo(transactionDao)
-    }
+//    @Provides
+//    @Singleton
+//    fun provideTransactionRepo(transactionDao: TransactionDao): TransactionRepo {
+//        return TransactionRepo(transactionDao)
+//    }
 
     @Provides
     @Singleton

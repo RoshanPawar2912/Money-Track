@@ -5,9 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
 
         <item name="colorPrimary">@color/color_primary</item>
-    </style>
-
-    <style name="Theme.MoneyTrack" parent="Base.Theme.MoneyTrack">
         <item name="activityBackgroundColor">@color/color_background</item>
     </style>
+
+    <style name="Theme.MoneyTrack" parent="Base.Theme.MoneyTrack"/>
 </resources>

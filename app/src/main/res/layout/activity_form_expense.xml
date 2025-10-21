@@ -11,26 +11,44 @@
 
     </data>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:background="?attr/activityBackgroundColor"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_margin="@dimen/dimen16"
             android:layout_width="match_parent"
+            android:layout_margin="@dimen/dimen16"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintEnabled="false">
+                app:hintTextColor="@color/edit_text_color"
+                android:textColorHint="@color/edit_text_color"
+                android:hint="Enter Amount">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:hint="Enter Amount"
+                    android:id="@+id/etAmount"
+                    android:textColor="@color/edit_text_color"
                     android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/edit_text_color"
+                android:textColorHint="@color/edit_text_color"
+                android:hint="Enter Note">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etNote"
+                    android:textColor="@color/edit_text_color"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -38,21 +56,19 @@
 
         </LinearLayout>
 
-        <!--<com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilDdType"
-            android:hint="@string/str_income"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnSave"
+            android:layout_gravity="bottom|end"
+            android:text="Save"
+            app:backgroundTint="@color/color_primary"
+            android:textColor="@color/white"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Tertiary"
+            android:layout_marginEnd="@dimen/dimen16"
+            android:layout_marginBottom="@dimen/dimen16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/ddType"
-                android:adapter="@{arrayAdapterType}"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
 
-        </com.google.android.material.textfield.TextInputLayout>-->
-
-    </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>

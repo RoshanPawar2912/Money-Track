@@ -8,5 +8,11 @@
     <color name="grey_100">#e0e0e0</color>
     <color name="grey_200">#c7c7c7</color>
 
+    <color name="red_100">#FF0000</color>
+
+    <color name="green_100">#37FF00</color>
+
+    <color name="edit_text_color">#000000</color>
+
     <color name="color_background">#F5F5F5</color>
 </resources>
