@@ -10,7 +10,6 @@ import javax.annotation.Nonnull
 data class Transaction(
     @PrimaryKey
     var _localId: String = UUID.randomUUID().toString(),
-
     var localUUID: String? = null,
     var type: String? = null,
     var amount: Double? = null,

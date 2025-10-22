@@ -2,15 +2,14 @@ package `in`.co.moneytrack.data.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import `in`.co.moneytrack.data.model.Transaction
 
 @Dao
 interface TransactionDao {
-    @Insert
-    suspend fun insertTransaction(transaction: Transaction)/*: Transaction {
-        return getByUUID(transaction.localUUID ?: "")
-    }*/
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTransaction(transaction: Transaction)
 
     @Query("SELECT * FROM my_transaction")
     suspend fun getTransactions(): List<Transaction>

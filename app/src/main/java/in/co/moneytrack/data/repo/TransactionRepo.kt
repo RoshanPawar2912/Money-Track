@@ -10,7 +10,7 @@ import javax.inject.Inject
 class TransactionRepo @Inject constructor(
     private val transactionDao: TransactionDao
 ) {
-    suspend fun save(transaction: Transaction): Transaction = withContext(Dispatchers.IO) {
+    suspend fun save(transaction: Transaction) = withContext(Dispatchers.IO) {
         transaction.localUUID = UUID.randomUUID().toString()
         transactionDao.insertTransaction(transaction)
     }

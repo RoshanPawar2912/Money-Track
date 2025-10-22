@@ -82,9 +82,9 @@ class FormExpense : AppCompatActivity() {
     fun getTransaction(): Transaction? {
         if (vm.transaction == null) vm.transaction = Transaction()
         vm.transaction?.type = "Expense"
-        vm.transaction?.amount = binding.etAmount.toString().toDoubleOrNull()
+        vm.transaction?.amount = binding.etAmount.text.toString().toDoubleOrNull()
         vm.transaction?.date = System.currentTimeMillis()
-        vm.transaction?.note = binding.etNote.toString()
+        vm.transaction?.note = binding.etNote.text.toString()
         return vm.transaction
     }
 }
